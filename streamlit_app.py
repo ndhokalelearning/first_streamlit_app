@@ -48,3 +48,9 @@ my_data_rows = my_cur.fetchall()
 #streamlit.text(my_data_row)
 streamlit.header("Fruit load list contains:")
 streamlit.dataframe(my_data_rows)
+
+# Let's put a pick list here so they can pick the fruit they want to include 
+fruit_selected_2 = streamlit.multiselect("Pick a fruit:", list(my_fruit_list.index))
+fruit_to_show_2 = my_fruit_list.loc[fruit_selected_2]
+#streamlit.dataframe(my_fruit_list)
+streamlit.text("thanks for adding:" + fruit_to_show_2)
