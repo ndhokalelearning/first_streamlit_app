@@ -53,4 +53,4 @@ streamlit.dataframe(my_data_rows)
 fruit_selected_2 = streamlit.multiselect("Pick a fruit:", list(my_fruit_list.index))
 fruit_to_show_2 = my_fruit_list.loc[fruit_selected_2]
 streamlit.text("thanks for adding:")
-streamlist.dataframe(fruit_to_show_2)
+streamlit.dataframe(fruit_to_show_2)
