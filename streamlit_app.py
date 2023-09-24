@@ -35,7 +35,7 @@ streamlit.header("Fruityvice Fruit Advice!")
 try:
   fruit_choice = streamlit.text_input('What fruit would you like information about?')
   if not fruit_choice:
-      streamlit.error('Enter fruit')
+      streamlit.error('select a fruit to get info')
   else:
     #fruityvice_response = fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
     #fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
@@ -49,7 +49,7 @@ except URLError as e:
 streamlit.header("Fruit load list contains:")
 # snowfalek related functions
 def get_fruit_load_list():
-  with cnx_cursor as my_cur:
+  with my_cnx.cursor() as my_cur:
     my_cur.execute("SELECT * from fruit_load_list")
     return my_cur.fetchall()
 
