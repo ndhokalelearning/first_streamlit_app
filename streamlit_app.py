@@ -46,5 +46,5 @@ my_data_rows = my_cur.fetchall()
 #streamlit.text("Hello from Snowflake:")
 #streamlit.text("Fruit load list contains:")
 #streamlit.text(my_data_row)
-streamlist.header("Fruit load list contains:");
-streamlit.text(my_data_rows)
+streamlist.header("Fruit load list contains:")
+streamlit.dataframe(my_data_rows)
